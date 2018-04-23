@@ -5,18 +5,23 @@ class IsomorphismAlg {
     * */
     fun doIt(a: String, b: String): Boolean {
 
-        fun Char.fkIndex() = this.toUpperCase() - 'A'
+        fun Char.simpleIndex() = this.toUpperCase() - 'A'
 
-        val array = Array(26) { -1 }
+        fun checkMapping(a: Int, b: Int, array: Array<Int>) =
+            when (array[a]) {
+                -1 -> { array[a] = b; true }
+                b -> true
+                else -> false
+            }
+
+        val arrayA = Array(26) { -1 }
+        val arrayB = Array(26) { -1 }
 
         (0 until a.length).forEach { index ->
-            val aL = a[index].fkIndex()
-            val bL = b[index].fkIndex()
-            when (array[aL]) {
-                -1 -> array[aL] = bL
-                bL -> {}
-                else -> return false
-            }
+            val aL = a[index].simpleIndex()
+            val bL = b[index].simpleIndex()
+            if (!checkMapping(aL, bL, arrayA) or !checkMapping(bL, aL, arrayB))
+                return false
         }
         return true
     }

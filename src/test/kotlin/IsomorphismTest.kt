@@ -1,9 +1,9 @@
-import org.junit.Assert
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
-import org.junit.Assert.*
 
-class Test {
+class IsomorphismTest {
 
     lateinit var alg: IsomorphismAlg
 
@@ -23,6 +23,8 @@ class Test {
 
     @Test
     fun shouldNotBeIsomorphic() {
+        assertFalse(alg.doIt("AA", "XY"))
+        assertFalse(alg.doIt("AB", "XX"))
         assertFalse(alg.doIt("foo", "bar"))
         assertFalse(alg.doIt("AABB", "ABAB"))
         assertFalse(alg.doIt("ABBC", "DFEE"))
