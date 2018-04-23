@@ -1,3 +1,5 @@
+package com.fk.tycho.string
+
 class AnagramAlg {
 
     /*

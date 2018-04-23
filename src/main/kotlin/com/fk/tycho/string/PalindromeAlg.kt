@@ -1,8 +1,7 @@
+package com.fk.tycho.string
+
 class PalindromeAlg {
 
-    /*
-    *
-    * */
     fun doIt(a: String): Boolean {
 
         fun Char.validCharacter() =

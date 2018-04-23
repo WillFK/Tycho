@@ -1,3 +1,5 @@
+package com.fk.tycho.string
+
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Before
@@ -13,7 +15,7 @@ class AnagramTest {
     }
 
     @Test
-    fun shouldBeIsomorphic() {
+    fun shouldBeAnagram() {
         assertTrue(alg.doIt("ABC", "ACB"))
         assertTrue(alg.doIt("AABB", "ABBA"))
         assertTrue(alg.doIt("ABCA", "BCAA"))
@@ -32,7 +34,7 @@ class AnagramTest {
     }
 
     @Test
-    fun shouldNotBeIsomorphic() {
+    fun shouldNotBeAnagram() {
         assertFalse(alg.doIt("AB", "AA"))
         assertFalse(alg.doIt("AB", "BB"))
         assertFalse(alg.doIt("AAB", "BBA"))

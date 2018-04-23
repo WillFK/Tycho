@@ -1,3 +1,5 @@
+package com.fk.tycho.string
+
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Before
@@ -13,7 +15,7 @@ class PalindromeTest {
     }
 
     @Test
-    fun shouldBeIsomorphic() {
+    fun shouldBePalindrome() {
         assertTrue(alg.doIt("ABCCBA"))
         assertTrue(alg.doIt("ABCBA"))
         assertTrue(alg.doIt("this is cool looc si siht"))
@@ -28,7 +30,7 @@ class PalindromeTest {
     }
 
     @Test
-    fun shouldNotBeIsomorphic() {
+    fun shouldNotBePalindrome() {
         assertFalse(alg.doIt("ABAB"))
         assertFalse(alg.doIt("Programcreek is awesome"))
         assertFalse(alg.doIt("King, are you glad you are king?"))
