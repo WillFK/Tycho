@@ -17,5 +17,9 @@ class ArraySumTest {
     @Test
     fun checkSums() {
         assertEquals(Pair(1, 3), alg.doIt(arrayOf(1, 2, 3, 4), 6))
+        assertEquals(Pair(0, 3), alg.doIt(arrayOf(1, 2, 3, 4), 5))
+        assertEquals(Pair(1, 2), alg.doIt(arrayOf(1, 2, 2, 4), 4))
+        assertEquals(Pair(2, 3), alg.doIt(arrayOf(1, 2, 3, 4), 7))
+        assertEquals(Pair(-1, -1), alg.doIt(arrayOf(1, 2, 3, 4), 10))
     }
 }

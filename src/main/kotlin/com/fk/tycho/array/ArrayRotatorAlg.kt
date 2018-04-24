@@ -1,6 +1,6 @@
 package com.fk.tycho.array
 
-class ArrayRotator {
+class ArrayRotatorAlg {
 
     fun doIt(array: Array<Int>, steps: Int): Array<Int> {
         val result = Array(array.size) { 0 }

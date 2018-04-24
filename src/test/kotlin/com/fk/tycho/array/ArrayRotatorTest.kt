@@ -6,15 +6,16 @@ import org.junit.Test
 
 class ArrayRotatorTest {
 
-    lateinit var alg: ArrayRotator
+    lateinit var alg: ArrayRotatorAlg
 
     @Before
     fun setup() {
-        alg = ArrayRotator()
+        alg = ArrayRotatorAlg()
     }
 
     @Test
     fun checkRotation() {
+        assertArrayEquals(arrayOf(0, 1, 2, 3, 4, 5, 6), alg.doIt(arrayOf(0, 1, 2, 3, 4, 5, 6), 0))
         assertArrayEquals(arrayOf(6, 0, 1, 2, 3, 4, 5), alg.doIt(arrayOf(0, 1, 2, 3, 4, 5, 6), 1))
         assertArrayEquals(arrayOf(5, 6, 0, 1, 2, 3, 4), alg.doIt(arrayOf(0, 1, 2, 3, 4, 5, 6), 2))
         assertArrayEquals(arrayOf(4, 5, 6, 0, 1, 2, 3), alg.doIt(arrayOf(0, 1, 2, 3, 4, 5, 6), 3))
