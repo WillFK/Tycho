@@ -15,6 +15,7 @@ class SubstringAlgTest {
 
     @Test
     fun checkSubstringLength() {
+        assertEquals(7, alg.doIt("abcaxyzwb"))
         assertEquals(3, alg.doIt("abc"))
         assertEquals(1, alg.doIt("bbb"))
         assertEquals(2, alg.doIt("abab"))

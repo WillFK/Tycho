@@ -8,22 +8,23 @@ class SubstringAlg {
 
         var length = 0
         var topLength = 0
-        var array = Array(26)  { 0 }
+        var array = Array(26)  { -1 }
 
-        fun reset() { length = 0; array = Array(26)  { 0 } }
-
-        (0 until a.length).forEach { index ->
+        fun reset() { length = 0; array = Array(26)  { -1 } }
+        var index = 0
+        while (index < a.length) {
             val charIndex = a[index].simpleIndex()
-            if (array[charIndex] > 0) {
+            if (array[charIndex] > -1) {
                 if (topLength < length) topLength = length
+                index = array[charIndex]+1
                 reset()
-                length++
-                array[charIndex]++
             } else {
+                array[charIndex] = index
+                index++
                 length++
-                array[charIndex]++
             }
         }
+
         if (topLength < length) topLength = length
         return topLength
     }
