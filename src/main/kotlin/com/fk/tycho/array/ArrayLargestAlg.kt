@@ -35,6 +35,11 @@ class ArrayLargestAlg {
             if (lo < hi) {
                 hoarePartition(lo, hi).let {
                     val pos = array.size - kth
+                    /*
+                        The difference from the usual quicksort is I sort only the partition we need
+                        in order to get the kth element. It's a similar logic behind the quickselect
+                        (https://en.wikipedia.org/wiki/Quickselect), I think
+                     */
                     when {
                         pos > it -> pseudoquicksort(it+1, hi)
                         else -> pseudoquicksort(lo, it)
