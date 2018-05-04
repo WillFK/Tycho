@@ -22,3 +22,22 @@ Algorithms playground
 `For example: Input: numbers={2, 7, 11, 15}, target=9 Output: index1=0, index2=1`
 
 * Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element. For example, given [3,2,1,5,6,4] and k = 2, return 5. Note: You may assume k is always valid, 1 ≤ k ≤ array's length.
+
+* Given an array of integers, write a function that returns true if there is a triplet (a, b, c) that satisfies a2 + b2 = c2.
+Example:
+```Input: arr[] = {3, 1, 4, 6, 5}
+Output: True
+There is a Pythagorean triplet (3, 4, 5).
+Input: arr[] = {10, 4, 6, 12, 5}
+Output: False
+There is no Pythagorean triplet.```
+
+
+
+* Given an array of distinct elements, rearrange the elements of array in zig-zag fashion in O(n) time. The converted array should be in form a < b > c < d > e < f.
+Example:
+```Input:  arr[] = {4, 3, 7, 8, 6, 2, 1}
+Output: arr[] = {3, 7, 4, 8, 2, 6, 1}
+
+Input:  arr[] =  {1, 4, 3, 2}
+Output: arr[] =  {1, 4, 2, 3}```
