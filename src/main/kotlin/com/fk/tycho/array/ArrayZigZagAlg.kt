@@ -35,11 +35,3 @@ class ArrayZigZagAlg {
         }
     }
 }
-
-fun main(args: Array<String>) {
-    //ArrayZigZagAlg().doIt(arrayOf(2, 7, 9, 4, 3, 2, 1, 0))
-    //ArrayZigZagAlg().doIt(arrayOf(3, 2, 5, 6, 7, 0, 1))
-    //ArrayZigZagAlg().doIt(arrayOf(1, 2, 3, 9, 8, 7, 5, 6, 10))
-    //ArrayZigZagAlg().doIt(arrayOf(1, 2, 3, 9, 8, 7))
-    //ArrayZigZagAlg().doIt(arrayOf(3, 9, 8, 7))
-}
